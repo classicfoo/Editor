@@ -1,0 +1,6 @@
+rename Form1 to Edform to reuse escape functionality
+set target output library to winexe
+
+count selected emails macro for outlook
+take filename as argument when launching program
+enable tab key
