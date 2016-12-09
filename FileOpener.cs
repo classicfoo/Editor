@@ -2,7 +2,6 @@ using System;
 using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
-using System.Threading;
 
 public class FileOpener : Form
 {
@@ -12,6 +11,7 @@ public class FileOpener : Form
 	public FileOpener(Form1 form1)
 	{
 		this.form1 = form1;
+		this.CenterToScreen();
 		listBox.Dock = DockStyle.Fill;
 		Controls.Add(listBox);
 		GetFiles();
@@ -27,6 +27,10 @@ public class FileOpener : Form
 			form1.Reload();
 			this.Close();
 		}
+		else if (e.KeyCode == Keys.Escape)
+		{
+			this.Close();
+		}
 	}
 
 	public void GetFiles()
@@ -38,3 +42,4 @@ public class FileOpener : Form
 	}
 	
 }
+

@@ -1,1 +1,1 @@
-C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe /target:winexe /out:Editor.exe Form1.cs Editor.cs FileOpener.cs
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe /target:winexe /out:Editor.exe EditorForm.cs Main.cs FileOpener.cs FileSaver.cs GoToForm.cs
