@@ -1,0 +1,49 @@
+v1.01
+DONE create feature save untitled file
+DONE modify loaded messagebox text from filename to loaded!
+DONE modify form1 dimensions to fit on laptop screen
+DONE rename form1 to EditorForm
+DONE rename Editor.cs to main.cs
+DONE create goto dialog
+DONE modify set target output library to winexe
+DONE modify feature to allow tab key in richtextbox
+DONE create feature to allow filename as argument when launching program
+DONE make all forms center to screen
+
+v1.02
+DONE create linenum property for editorform
+DONE create linenum and filename in window title
+DONE create goto funtionality in form1
+DONE modify richtextbox borderstyle to none
+
+v1.03
+DONE create "betterform.cs" for extending form functionality
+DONE create feature close form by pressing escape
+DONE create "promptdialog.cs" for user input dialog
+DONE create "gotodialog.cs" for go to functionality
+DONE deleted "fileopener.cs"
+DONE deleted "filesaver.cs"
+DONE deleted "gotoform.cs"
+DONE create compatibility with .net 2.0 and windows xp
+
+TODO
+create control + d to copy paste line
+create statusbar
+show dirty / saved status in titlebar
+show line number in statusbar
+remember form position
+settings in menu
+remove resizable handle for promptbox
+create icon for program
+
+MAYBE TODO
+make fileopener, fielsaver and gotoform static and just get values and get editorform to set values
+
+BUG
+FIXED cannot get .cs files to open with editor as default. (must choose "always use this app to open this type of file")
+
+count selected emails macro for outlook
+
+
+
+
