@@ -1,4 +1,4 @@
- ![48.png](48.png "48.png") 
+ ![editorlogo4.png](editorlogo4.png "editorlogo4.png") 
  
 # Editor
 
