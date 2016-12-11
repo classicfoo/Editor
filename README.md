@@ -8,7 +8,7 @@ It was created using Winforms and ___without___ Visual Studio.
 
 Only requires .NET 2.0 and up. Tested with default Windows installation, XP and up.
 
-![Editor-Win10-Screenshot.png](Editor-Win10-Screenshot.png#3 "Editor-Win10-Screenshot.png")
+![Editor-Win10-Screenshot.png](Editor-Win10-Screenshot.png#5 "Editor-Win10-Screenshot.png")
 
 ## Features
 
