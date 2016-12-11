@@ -1,5 +1,4 @@
-![48.png](48.png "48.png") 
-# Editor
+# Editor ![48.png](48.png "48.png") 
 
 A text editor Inspired by Notepad++ and Notepad.
 
