@@ -16,11 +16,11 @@ Exe well under 1Mb.
 
 No installation required.
 
-Ctrl + G for Go-To-Line dialog.
-
-Ctrl + O for Open dialog.
-
-Ctrol + S to Save and for Save-As dialog.
+| Shortcut  | Functionality |
+| --------- | ------------- |
+| Ctrl + G  | Go-To-Line dialog |
+| Ctrl + O  | Open dialog |
+| Ctrol + S | Save and for Save-As dialog |
 
 
 
