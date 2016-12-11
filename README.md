@@ -17,7 +17,7 @@ Exe well under 1Mb.
 No installation required.
 
 | Shortcut  | Functionality |
-| --------- | ------------- |
+| --------- | :------------ |
 | Ctrl + G  | Go-To-Line dialog |
 | Ctrl + O  | Open dialog |
 | Ctrol + S | Save and for Save-As dialog |
