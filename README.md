@@ -1,5 +1,6 @@
 # Editor
 
-A text editor that created using Winforms and without Visual Studio.
+A text editor Inspired by Notepad++ and Notepad.
+It was created using Winforms and __without__ Visual Studio.
 
-Inspired by Notepad++ and Notepad.
+
