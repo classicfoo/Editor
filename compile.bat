@@ -1,0 +1,1 @@
+C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\csc.exe /resource:icon.ico /win32icon:Icon/icon.ico /target:winexe /out:Editor.exe *.cs && Editor.exe
