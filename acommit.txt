@@ -42,6 +42,13 @@ DONE .cs files now default for openfiledialog
 
 
 TODO
+make open and save work in menustrip
+find and replace dialog
+prompt saveas on dirty close
+
+
+
+
 create control + d to copy paste line
 show dirty in titlebar
 remember form position

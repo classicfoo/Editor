@@ -63,9 +63,30 @@ public class EditorForm: BetterForm
 		
 		rtb.KeyDown += new KeyEventHandler(Rtb_KeyDown);
 		rtb.SelectionChanged += new EventHandler(Rtb_SelectionChanged);
-		//ms.Items[0].DropDown[0].Click += OpenFile();
+
+
+		//menustrip file
+		ToolStripMenuItem file = (ToolStripMenuItem) ms.Items[0];
+
+		//menustrip file > open
+		file.DropDownItems[0].Click += Ms_Open;
+
+		//menustrip file > save
+		file.DropDownItems[1].Click += Ms_Save;
+
+
 	}
-	
+
+	public void Ms_Open(Object sender, EventArgs e)
+	{
+		OpenFile();
+	}
+
+	public void Ms_Save(Object sender, EventArgs e)
+	{
+		SaveAs();
+	}
+
 	public void Rtb_SelectionChanged(Object sender, EventArgs e)
 	{
 		this.Text = GetWindowTitle();
