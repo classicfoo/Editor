@@ -47,44 +47,33 @@ public class EditorForm: BetterForm
 			LoadFile(FilePath);
 		}
 		
+		//properties
 		this.Width = 700;
 		this.Height = 500;
 		this.CenterToScreen();
 		this.Text = GetWindowTitle();
-		this.ss.LineNum = rtb.LineNum;
-		//string icon = AppDomain.CurrentDomain.BaseDirectory + @"Icon\icon.ico";
-		//this.Icon = new Icon(icon);
-
-		this.MainMenuStrip = ms;
 		
+		//binding
+		this.ss.LineNum = rtb.LineNum;
+
+		//add controls
 		this.Controls.Add(rtb);
 		this.Controls.Add(ss);
 		this.Controls.Add(ms);
-		
+
+		//EVENTS
+
+		//richtextbox events
 		rtb.KeyDown += new KeyEventHandler(Rtb_KeyDown);
 		rtb.SelectionChanged += new EventHandler(Rtb_SelectionChanged);
 
-
-		//menustrip file
+		//menustrip events
 		ToolStripMenuItem file = (ToolStripMenuItem) ms.Items[0];
-
-		//menustrip file > open
-		file.DropDownItems[0].Click += Ms_Open;
-
-		//menustrip file > save
-		file.DropDownItems[1].Click += Ms_Save;
+		file.DropDownItems[0].Click += delegate(Object o, EventArgs e) { OpenFile(); };
+		file.DropDownItems[1].Click += delegate(Object o, EventArgs e) { SaveAs(); };
+		file.DropDownItems[2].Click += delegate(Object o, EventArgs e) { this.Close(); };
 
 
-	}
-
-	public void Ms_Open(Object sender, EventArgs e)
-	{
-		OpenFile();
-	}
-
-	public void Ms_Save(Object sender, EventArgs e)
-	{
-		SaveAs();
 	}
 
 	public void Rtb_SelectionChanged(Object sender, EventArgs e)
