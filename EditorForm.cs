@@ -99,23 +99,15 @@ public class EditorForm: BetterForm
 
 	public void Rtb_KeyDown(Object sender, KeyEventArgs e)
 	{
+		if(e.Control && e.KeyCode == Keys.F)
+		{
+			FindDialog fd = new FindDialog(this);
+			fd.Show();
+		}
 
 		if(e.Control && e.KeyCode == Keys.G)
 		{
-			GoToDialog gtd = new GoToDialog();
-			if (gtd.ShowDialog() == DialogResult.OK)
-			{
-				int input = Convert.ToInt32(gtd.Input);
-				if(input > rtb.Lines.Length)
-				{
-					rtb.SelectionLength = 0;
-				}
-				else
-				{
-					rtb.GoTo(input);
-				}
-			}
-			this.Text = GetWindowTitle();
+			GoTo();
 		}
 
 		if(e.Control && e.KeyCode == Keys.S)
@@ -127,16 +119,29 @@ public class EditorForm: BetterForm
 		{
 			OpenFile();
 		}
-	
-		if(e.Control && e.KeyCode == Keys.F)
-		{
-			Find();
-		}
 	}
 
-	public void Find()
+	public void FindString(string s)
 	{
-		
+		rtb.FindString(s);
+	}
+
+	public void GoTo()
+	{
+		GoToDialog gtd = new GoToDialog();
+		if (gtd.ShowDialog() == DialogResult.OK)
+		{
+			int input = Convert.ToInt32(gtd.Input);
+			if(input > rtb.Lines.Length)
+			{
+				rtb.SelectionLength = 0;
+			}
+			else
+			{
+				rtb.GoTo(input);
+			}
+		}
+		this.Text = GetWindowTitle();
 	}
 	
 	public void OpenFile()

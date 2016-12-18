@@ -40,12 +40,15 @@ DONE show line number in statusbar
 DONE create .cs filter for openfiledialog
 DONE .cs files now default for openfiledialog
 DONE add functionality to file > open, save, close
+DONE find dialog
+
 
 TODO
 
 find and replace dialog
 prompt saveas on dirty close
 
+log changed files
 
 create control + d to copy paste line
 show dirty in titlebar

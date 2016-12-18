@@ -25,18 +25,15 @@ public class PromptDialog : BetterForm
 		//LABEL
 		label.Text = "Input: ";
 		label.Location = new Point(label.Location.X + 10, label.Location.Y + 10);
-		this.Controls.Add(label);
-		
+	
 		//TEXTBOX
 		tb.Width = tb.Width + 200;
 		tb.Location = new Point(label.Location.X, label.Location.Y + label.Height);
-		this.Controls.Add(tb);
 		
 		//OK BUTTON
 		btn_ok.Text = "OK";
 		btn_ok.DialogResult = DialogResult.OK;
 		btn_ok.Location = new Point(tb.Location.X, tb.Location.Y + 10 + tb.Height);
-		this.Controls.Add(btn_ok);
 		
 		//CANCEL BUTTON
 		btn_cancel.Text = "Cancel";
@@ -44,20 +41,25 @@ public class PromptDialog : BetterForm
 		int width = tb.Location.X + btn_ok.Width + 10;
 		int height = tb.Location.Y + 10 + tb.Height;
 		btn_cancel.Location = new Point(width, height);
+
+		//Add controls
+		this.Controls.Add(label);
+		this.Controls.Add(tb);
+		this.Controls.Add(btn_ok);
 		this.Controls.Add(btn_cancel);
-		
+
 		//EVENTS
 		btn_cancel.Click += new EventHandler(btn_cancel_click);
 		btn_ok.Click += new EventHandler(btn_ok_click);
 
 	}
 	
-	public void btn_cancel_click(Object sender, EventArgs e)
+	public virtual void btn_cancel_click(Object sender, EventArgs e)
 	{
 		this.Close();
 	}
 	
-	public void btn_ok_click(Object sender, EventArgs e)
+	public virtual void btn_ok_click(Object sender, EventArgs e)
 	{
 		Input = tb.Text;
 		this.Close();

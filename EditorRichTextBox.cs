@@ -8,6 +8,8 @@ using System.Runtime.InteropServices;
 public class EditorRichTextBox : RichTextBox
 {
 	public int LineNum;
+	public int LastFindLocation;
+	public string LastFindTarget;
 		
 	public EditorRichTextBox()
 	{
@@ -17,9 +19,41 @@ public class EditorRichTextBox : RichTextBox
 		this.AcceptsTab = true;
 		this.WordWrap = false;
 		this.BorderStyle = BorderStyle.None;
+		this.LastFindLocation = 0;
+		this.LastFindTarget = "";
 		this.SelectionIndent += 5;
-
+		this.HideSelection = false;
 		
+	}
+
+	public void FindString(String target)
+	{
+		int result = this.Find(target, LastFindLocation, RichTextBoxFinds.NoHighlight);
+
+		if(result == -1) 
+		{
+			string message;
+			if(target.Equals(this.LastFindTarget))
+			{				
+				message = string.Format("End of search: \"{0}\"", target);
+			}
+			else
+			{
+				message = string.Format("Cannot find: \"{0}\"", target);
+			}
+
+			MessageBox.Show(message);
+			this.LastFindLocation = 0;
+			this.LastFindTarget = target;
+		}
+		else
+		{
+			this.Select(result, target.Length);
+			this.LastFindLocation = result + target.Length;
+			this.LastFindTarget = target;
+		}
+		
+
 	}
 	
 	public void GoTo(int newLineNum)
