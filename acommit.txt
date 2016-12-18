@@ -39,14 +39,12 @@ DONE saved status in titlebar
 DONE show line number in statusbar
 DONE create .cs filter for openfiledialog
 DONE .cs files now default for openfiledialog
-
+DONE add functionality to file > open, save, close
 
 TODO
-make open and save work in menustrip
+
 find and replace dialog
 prompt saveas on dirty close
-
-
 
 
 create control + d to copy paste line
