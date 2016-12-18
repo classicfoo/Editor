@@ -120,20 +120,23 @@ public class EditorForm: BetterForm
 
 		if(e.Control && e.KeyCode == Keys.S)
 		{
-			if(String.IsNullOrEmpty(FilePath))
-			{
-				SaveAs();
-			}
-			else
-			{
-				Save();
-			}
+			if (String.IsNullOrEmpty(FilePath)) { SaveAs(); } else { Save(); };
 		}
 		
 		if(e.Control && e.KeyCode == Keys.O)
 		{
 			OpenFile();
 		}
+	
+		if(e.Control && e.KeyCode == Keys.F)
+		{
+			Find();
+		}
+	}
+
+	public void Find()
+	{
+		
 	}
 	
 	public void OpenFile()

@@ -3,13 +3,7 @@ using System.Windows.Forms;
 using System.Drawing;
 
 public class BetterForm : Form
-{
-
-	//CenterControl
-	
-	//CenterControls
-	
-	
+{	
 	public BetterForm()
 	{
 		this.KeyPreview = true;
@@ -25,3 +19,4 @@ public class BetterForm : Form
 		}
 	}
 }
+
