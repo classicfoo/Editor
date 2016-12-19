@@ -119,6 +119,30 @@ public class EditorForm: BetterForm
 		{
 			OpenFile();
 		}
+		if(e.KeyCode == Keys.Tab)
+		{
+
+			if (rtb.SelectionLength > 0)
+			{			
+			string result = "";
+			string[] lines = rtb.SelectedLines();
+			
+			for(int i=0; i< lines.Length; i++)
+			{
+				result += "\t" + lines[i];
+				
+				if (i == lines.Length -1)
+				{
+					result += "\n";
+				}
+				
+			}
+
+			rtb.SelectedText = result;
+			}			
+			
+			
+		}
 	}
 
 	public void FindString(string s)
@@ -139,6 +163,7 @@ public class EditorForm: BetterForm
 			else
 			{
 				rtb.GoTo(input);
+				rtb.HighLightLine();
 			}
 		}
 		this.Text = GetWindowTitle();

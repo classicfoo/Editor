@@ -52,15 +52,12 @@ public class EditorRichTextBox : RichTextBox
 			this.LastFindLocation = result + target.Length;
 			this.LastFindTarget = target;
 		}
-		
-
 	}
 	
 	public void GoTo(int newLineNum)
 	{
 		int index = this.GetFirstCharIndexFromLine(newLineNum - 1);
 		this.SelectionStart = index;
-		HighLightLine();
 	}
 	
 	public void HighLightLine()
@@ -78,7 +75,13 @@ public class EditorRichTextBox : RichTextBox
 	{
 		return this.GetFirstCharIndexFromLine(this.GetLineFromCharIndex(SelectionStart));
 	}
-	
+
+	public string[] SelectedLines()
+	{
+		return this.SelectedText.Split(new String[] {"\n"}, StringSplitOptions.RemoveEmptyEntries);
+	}
+
+/*
 	public void BeginUpdate() 
 	{
         SendMessage(this.Handle, WM_SETREDRAW, (IntPtr)0, IntPtr.Zero);
@@ -93,6 +96,8 @@ public class EditorRichTextBox : RichTextBox
     [DllImport("user32.dll")]
     private static extern IntPtr SendMessage(IntPtr hWnd, int msg, IntPtr wp, IntPtr lp);
     private const int WM_SETREDRAW = 0x0b;
+
+*/
 	
 }
 
