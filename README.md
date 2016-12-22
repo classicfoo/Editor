@@ -1,4 +1,4 @@
- ![editorlogo4.png](editorlogo4.png#2 "editorlogo4.png") 
+ <!--![editorlogo4.png](editorlogo4.png#2 "editorlogo4.png") -->
  
 # Editor
 
@@ -8,7 +8,7 @@ It was created using Winforms and ___without___ Visual Studio.
 
 Only requires .NET 2.0 and up. Tested with default Windows installation, XP and up.
 
-![Editor-Win10-Screenshot.png](Editor-Win10-Screenshot.png#6 "Editor-Win10-Screenshot.png")
+<!--![Editor-Win10-Screenshot.png](Editor-Win10-Screenshot.png#6 "Editor-Win10-Screenshot.png")-->
 
 ## Features
 
@@ -21,6 +21,7 @@ No installation required.
 | Ctrl + G  | Go-To-Line dialog 
 | Ctrl + O  | Open dialog 
 | Ctrl + S  | Save and for Save-As dialog 
+| Ctrl + F  | Find
 
 
 
