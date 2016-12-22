@@ -23,6 +23,7 @@ public class EditorRichTextBox : RichTextBox
 		this.LastFindTarget = "";
 		this.SelectionIndent += 5;
 		this.HideSelection = false;
+		this.ScrollBars =  RichTextBoxScrollBars.ForcedBoth;
 		
 	}
 
@@ -81,6 +82,11 @@ public class EditorRichTextBox : RichTextBox
 		return this.SelectedText.Split(new String[] {"\n"}, StringSplitOptions.RemoveEmptyEntries);
 	}
 
+	public int SelectedLineCount()
+	{
+		return this.SelectedText.Split(new String[] {"\n"}, StringSplitOptions.RemoveEmptyEntries).Length;
+	}
+
 /*
 	public void BeginUpdate() 
 	{
@@ -100,5 +106,6 @@ public class EditorRichTextBox : RichTextBox
 */
 	
 }
+
 
 

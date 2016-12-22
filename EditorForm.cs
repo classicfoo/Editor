@@ -121,27 +121,24 @@ public class EditorForm: BetterForm
 		}
 		if(e.KeyCode == Keys.Tab)
 		{
+			e.SuppressKeyPress = true;
 
 			if (rtb.SelectionLength > 0)
-			{			
-			string result = "";
-			string[] lines = rtb.SelectedLines();
-			
-			for(int i=0; i< lines.Length; i++)
 			{
-				result += "\t" + lines[i];
+				string result = "";
+				string[] lines = rtb.SelectedLines();
 				
-				if (i == lines.Length -1)
+				for(int i=0; i< lines.Length; i++)
 				{
-					result += "\n";
+					result += "\t" + lines[i] + "\n";
 				}
-				
+				rtb.SelectedText = result;
 			}
 
-			rtb.SelectedText = result;
-			}			
-			
-			
+			else 
+			{
+				rtb.SelectedText += "\t";
+			}
 		}
 	}
 
@@ -222,6 +219,15 @@ public class EditorForm: BetterForm
 		this.Text = GetWindowTitle()  + " (Saved)";
 	}
 }
+
+
+
+
+
+
+
+
+
 
 
 

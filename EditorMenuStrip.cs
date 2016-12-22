@@ -52,6 +52,6 @@ public class EditorMenuStrip : MenuStrip
 			about.Text = "About";
 			help.DropDownItems.Add(about);
 		
-		this.BackColor = Color.White;
+		//this.BackColor = Color.White;
 	}
 }

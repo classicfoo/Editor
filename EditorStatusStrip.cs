@@ -24,9 +24,10 @@ public class EditorStatusStrip : StatusStrip
 	public EditorStatusStrip()
 	{
 		this.Items.Add(tssl_LineNum);
-		this.BackColor = Color.White;
+		//this.BackColor = Color.White;
 	}
 	
 	
 }
+
 
